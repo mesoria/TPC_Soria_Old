@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cuatrimestral_Soria", "Cuatrimestral_Soria\Cuatrimestral_Soria.csproj", "{2FE45B25-B037-4A01-A5DD-5FA2182FF833}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FE45B25-B037-4A01-A5DD-5FA2182FF833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE45B25-B037-4A01-A5DD-5FA2182FF833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE45B25-B037-4A01-A5DD-5FA2182FF833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE45B25-B037-4A01-A5DD-5FA2182FF833}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6371A94-6668-420C-9ECA-A37AC72D6D69}
+	EndGlobalSection
+EndGlobal
