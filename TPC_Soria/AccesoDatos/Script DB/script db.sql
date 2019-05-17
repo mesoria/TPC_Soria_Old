@@ -2,9 +2,6 @@ use master
 go
 create database SORIA_DB
 go
-use SORIA_DB
-go
-
 USE SORIA_DB
 go
 
@@ -22,8 +19,8 @@ CREATE TABLE [dbo].[PERSONAS](
 	[NACIMIENTO]  [DATE]NOT NULL CHECK(DATEDIFF(DAY,NACIMIENTO,GETDATE())>0),
 	[EMAIL]		  [VARCHAR](60)NOT NULL,
 	[Contraseña]  [VARCHAR](30)NOT NULL,
-	[TipoUsuario] [VARCHAR](13)NOT NULL check(TipoUsuario = 'Administrador' or TipoUsuario = 'Usuario' 
-											or TipoUsuario = 'Cliente' or TipoUsuario = 'Proveedor'),
+	[Perfil] [VARCHAR](13)NOT NULL check(Perfil = 'Administrador' or Perfil = 'Usuario' 
+											or Perfil = 'Cliente' or Perfil = 'Proveedor'),
 
  CONSTRAINT [PK_PERSONAS] PRIMARY KEY CLUSTERED 
 (
@@ -70,20 +67,16 @@ CREATE TABLE [dbo].[PERSONAS](
 ) ON [PRIMARY]
 GO
 
-CREATE TABLE [dbo].[PERSONAS](
-	[ID]		  [INT] NOT NULL IDENTITY(1,1),
-	[NOMBRE]	  [VARCHAR](50)NOT NULL,
-	[APELLIDO]	  [VARCHAR](50)NOT NULL,
+CREATE TABLE [dbo].[USUARIOS](
 	[DNI]		  [VARCHAR](10)NOT NULL,
-	[NACIMIENTO]  [DATE]NOT NULL CHECK(DATEDIFF(DAY,NACIMIENTO,GETDATE())>0),
-	[EMAIL]		  [VARCHAR](60)NOT NULL,
-	[Contraseña]  [VARCHAR](30)NOT NULL,
+	[DateCreated]  [DATE]NOT NULL CHECK(DATEDIFF(DAY,NACIMIENTO,GETDATE())>0),
+	[Pass]  [VARCHAR](30)NOT NULL,
 	[TipoUsuario] [VARCHAR](13)NOT NULL check(TipoUsuario = 'Administrador' or TipoUsuario = 'Usuario' 
 											or TipoUsuario = 'Cliente' or TipoUsuario = 'Proveedor'),
 
  CONSTRAINT [PK_PERSONAS] PRIMARY KEY CLUSTERED 
 (
-	[ID] ASC
+	[DNI] ASC
 )WITH
 (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]

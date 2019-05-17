@@ -24,13 +24,25 @@ namespace Cuatrimestral_Soria
             if (tbxDNI.Text.Trim() == "" || tbxPass.Text.Trim() == "")
             {
                     MessageBox.Show("Debes completar todos los campos");
-                    return;
+                    //return;
             }
             else
             {
-                FrmHome frmhome = new FrmHome();
-                //frmhome.MdiParent = this;
-                frmhome.Show();
+                PersonaNegocio persona = new PersonaNegocio();
+
+                if( persona.isUser( tbxDNI.Text, tbxPass.Text) != null )
+                {
+                    //FrmHome frmhome = new FrmHome();
+                    //frmhome.MdiParent = this;
+                    //frmhome.Show();
+                    Close();
+                    //return persona;
+                }
+                else
+                {
+                    MessageBox.Show("DNI o Contraseña incorrecta.");
+                    //return;
+                }
             }
         }
     }
