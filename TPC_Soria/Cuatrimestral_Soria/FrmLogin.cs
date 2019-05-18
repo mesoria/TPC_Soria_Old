@@ -14,9 +14,18 @@ namespace Cuatrimestral_Soria
 {
     public partial class FrmLogin : Form
     {
+        public delegate void pasar(Persona persona);
+        public event pasar Atras;
+        private PersonaNegocio personaNLocal = new PersonaNegocio();
+        private Persona personaLocal = new Persona();
         public FrmLogin()
         {
             InitializeComponent();
+        }
+        public FrmLogin(Persona persona)
+        {
+            InitializeComponent();
+            personaLocal = persona;
         }
         
         private void btnEnter_Click(object sender, EventArgs e)
@@ -28,20 +37,21 @@ namespace Cuatrimestral_Soria
             }
             else
             {
-                PersonaNegocio persona = new PersonaNegocio();
-
-                if( persona.isUser( tbxDNI.Text, tbxPass.Text) != null )
+                personaLocal = personaNLocal.isUser(tbxDNI.Text, tbxPass.Text);
+                if ( (personaLocal.DNI == tbxDNI.Text) && (personaLocal.Usuario.Contraseña == tbxPass.Text ) )
                 {
                     //FrmHome frmhome = new FrmHome();
                     //frmhome.MdiParent = this;
                     //frmhome.Show();
+                    Atras(personaLocal);
                     Close();
                     //return persona;
                 }
                 else
                 {
                     MessageBox.Show("DNI o Contraseña incorrecta.");
-                    //return;
+                    tbxDNI.Text = "";
+                    tbxPass.Text = "";
                 }
             }
         }

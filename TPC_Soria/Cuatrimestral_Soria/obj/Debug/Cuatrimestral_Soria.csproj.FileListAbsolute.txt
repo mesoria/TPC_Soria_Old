@@ -29,3 +29,4 @@ C:\Users\Lenovo\source\repos\TPC_Soria\Cuatrimestral_Soria\bin\Debug\Dominio.pdb
 C:\Users\Lenovo\source\repos\TPC_Soria\Cuatrimestral_Soria\bin\Debug\Negocio.pdb
 C:\Users\Lenovo\source\repos\TPC_Soria\Cuatrimestral_Soria\bin\Debug\AccesoDatos.pdb
 C:\Users\Lenovo\source\repos\TPC_Soria\Cuatrimestral_Soria\obj\Debug\Cuatrimestral_Soria.csproj.CopyComplete
+C:\Users\Lenovo\source\repos\TPC_Soria\Cuatrimestral_Soria\obj\Debug\Cuatrimestral_Soria.FrmListar.resources
